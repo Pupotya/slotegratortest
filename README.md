@@ -1,4 +1,4 @@
-<img src="assets/icon.png" alt="Project Icon" width="18" height="18"/> **Slotegrator Test Automation**
+<img src="assets/icon.png" alt="Project Icon" width="23" height="23"/> **Slotegrator Test Automation**
 
 This project automates player api running Gradle-based Java tests inside a Docker container and generates an Allure report for inspection.
 
