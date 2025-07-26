@@ -19,6 +19,9 @@ This project automates player api running Gradle-based Java tests inside a Docke
 
 ```./gradlew clean test -DLOG_LEVEL="${LOG_LEVEL}" -DTEST_EMAIL="${YOUR_EMAIL}" -DTEST_PASSWORD="${PASSWORD}"```
 
+⚠️ For Unix-based systems, you might need to make the Gradle wrapper executable by running:
+```chmod +X gradlew```
+
 📁 To see report:
 
 ```allure serve ./build/allure-results```
