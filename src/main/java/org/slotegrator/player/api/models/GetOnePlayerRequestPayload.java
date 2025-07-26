@@ -1,3 +1,3 @@
-package org.slotegrator.players.api.models;
+package org.slotegrator.player.api.models;
 
 public record GetOnePlayerRequestPayload(String email){}

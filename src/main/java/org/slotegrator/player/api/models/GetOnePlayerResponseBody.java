@@ -1,4 +1,4 @@
-package org.slotegrator.players.api.models;
+package org.slotegrator.player.api.models;
 
 import com.google.gson.annotations.SerializedName;
 

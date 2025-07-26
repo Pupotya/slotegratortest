@@ -1,10 +1,10 @@
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import org.slotegrator.players.api.PlayerGenerator;
-import org.slotegrator.players.api.endpoints.CreatePlayerEndpoint;
-import org.slotegrator.players.api.endpoints.DeleteOneEndpoint;
-import org.slotegrator.players.api.endpoints.GetAllPlayersEndpoint;
-import org.slotegrator.players.api.endpoints.GetOnePlayerEndpoint;
+import org.slotegrator.player.PlayerGenerator;
+import org.slotegrator.player.api.endpoints.CreatePlayerEndpoint;
+import org.slotegrator.player.api.endpoints.DeleteOneEndpoint;
+import org.slotegrator.player.api.endpoints.GetAllPlayersEndpoint;
+import org.slotegrator.player.api.endpoints.GetOnePlayerEndpoint;
 import org.slotegrator.user.TestUser;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

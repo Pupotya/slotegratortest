@@ -1,8 +1,8 @@
-package org.slotegrator.players.api.endpoints;
+package org.slotegrator.player.api.endpoints;
 
 import io.restassured.http.ContentType;
 import org.slotegrator.core.api.AbstractEndpoint;
-import org.slotegrator.players.api.models.GetOnePlayerResponseBody;
+import org.slotegrator.player.api.models.GetOnePlayerResponseBody;
 
 import static org.slotegrator.core.configuration.ConfigInitialization.getSiteConfig;
 

@@ -1,9 +1,9 @@
-package org.slotegrator.players.api.endpoints;
+package org.slotegrator.player.api.endpoints;
 
 import com.google.gson.Gson;
 import io.restassured.http.ContentType;
 import org.slotegrator.core.api.AbstractEndpoint;
-import org.slotegrator.players.api.PlayerDTO;
+import org.slotegrator.player.api.models.PlayerDTO;
 
 import static org.slotegrator.core.configuration.ConfigInitialization.getSiteConfig;
 

@@ -1,6 +1,7 @@
-package org.slotegrator.players.api;
+package org.slotegrator.player;
 
 import com.github.javafaker.Faker;
+import org.slotegrator.player.api.models.PlayerDTO;
 
 import java.util.Locale;
 import java.util.UUID;

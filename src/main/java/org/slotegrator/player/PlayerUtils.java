@@ -1,6 +1,7 @@
-package org.slotegrator.players.api;
+package org.slotegrator.player;
 
-import org.slotegrator.players.api.models.GetOnePlayerResponseBody;
+import org.slotegrator.player.api.models.PlayerDTO;
+import org.slotegrator.player.api.models.GetOnePlayerResponseBody;
 
 public class PlayerUtils {
 
