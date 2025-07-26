@@ -15,7 +15,6 @@ import org.slotegrator.player.api.endpoints.GetOnePlayerEndpoint;
 import org.slotegrator.player.api.models.GetOnePlayerResponseBody;
 import org.slotegrator.user.TestUser;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -33,11 +32,6 @@ import java.util.stream.IntStream;
 public class PlayerTest {
 
     private String accessToken;
-
-    @BeforeSuite
-    public void checkVariables() {
-
-    }
 
     @BeforeClass
     public void authorizeTestUser() {
