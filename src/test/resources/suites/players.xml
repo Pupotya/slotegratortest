@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Players Regression" parallel="tests" thread-count="2">
+    <test name="Validation" parallel="methods">
+        <classes>
+            <class name="ValidationTest"/>
+        </classes>
+    </test>
+    <test name="API Regression">
+        <classes>
+            <class name="PlayerTest"/>
+        </classes>
+    </test>
+</suite>

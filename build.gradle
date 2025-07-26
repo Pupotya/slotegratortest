@@ -1,0 +1,67 @@
+plugins {
+    id 'io.qameta.allure-adapter' version '2.9.6' apply true
+    id 'java' apply true
+}
+
+allure {
+    adapter {
+        autoconfigure = true
+        aspectjWeaver = true
+        aspectjVersion = "1.9.24"
+
+        // in order to disable dependencySubstitution (spi-off classifier)
+        autoconfigureListeners = true
+        allureJavaVersion = '2.29.0'
+    }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(22))
+    }
+}
+
+group = 'org.slotegrator'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'org.testng:testng:7.10.2'
+    implementation 'io.rest-assured:rest-assured:5.4.0'
+    implementation 'io.rest-assured:json-schema-validator:5.4.0'
+    implementation 'org.aeonbits.owner:owner-java8:1.0.12'
+    implementation 'org.assertj:assertj-core:3.26.3'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.awaitility:awaitility:4.3.0'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.25.1'
+//    implementation 'org.apache.logging.log4j:log4j-core:2.25.1'
+    implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.25.1'
+
+    implementation 'io.qameta.allure:allure-testng:2.29.0'
+    implementation 'io.qameta.allure:allure-assertj:2.29.0'
+    implementation 'io.qameta.allure:allure-rest-assured:2.29.0'
+    implementation 'org.aspectj:aspectjweaver:1.9.24'
+}
+
+test {
+    systemProperty "test.email", System.getProperty("TEST_EMAIL")
+    systemProperty "test.password", System.getProperty("TEST_PASSWORD")
+    systemProperty "LOG_LEVEL", System.getProperty("LOG_LEVEL")
+
+    systemProperty 'log4j2.configurationFile', 'file:src/main/resources/log4j2.xml'
+    useTestNG() {
+        useDefaultListeners = true
+        suites 'src/test/resources/suites/players.xml'
+    }
+    testLogging {
+        events "passed", "failed", "skipped", "standardError", "standardOut"
+        exceptionFormat "full"
+        showStackTraces true
+        showStandardStreams = true
+    }
+}
